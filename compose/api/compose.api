@@ -69,6 +69,17 @@ public final class com/kizitonwose/calendar/compose/CalendarState : androidx/com
 public final class com/kizitonwose/calendar/compose/CalendarState$Companion {
 }
 
+public final class com/kizitonwose/calendar/compose/CalendarStateExtensionsKt {
+	public static final fun getTimeBlockCount (Lcom/kizitonwose/calendar/compose/CalendarState;Lcom/kizitonwose/calendar/compose/TimeBlockStore;Ljava/time/LocalDate;)I
+	public static final fun getTimeBlocksByType (Lcom/kizitonwose/calendar/compose/CalendarState;Lcom/kizitonwose/calendar/compose/TimeBlockStore;Ljava/time/LocalDate;Lcom/kizitonwose/calendar/core/TimeBlockType;)Ljava/util/List;
+	public static final fun getTimeBlocksForDate (Lcom/kizitonwose/calendar/compose/CalendarState;Lcom/kizitonwose/calendar/compose/TimeBlockStore;Ljava/time/LocalDate;)Ljava/util/List;
+	public static final fun getTimeBlocksInRange (Lcom/kizitonwose/calendar/compose/CalendarState;Lcom/kizitonwose/calendar/compose/TimeBlockStore;Ljava/time/LocalDate;Ljava/time/LocalDate;)Ljava/util/List;
+	public static final fun getVisibleTimeBlocks (Lcom/kizitonwose/calendar/compose/CalendarState;Lcom/kizitonwose/calendar/compose/TimeBlockStore;Landroidx/compose/runtime/Composer;I)Ljava/util/List;
+	public static final fun hasTimeBlocksOnDate (Lcom/kizitonwose/calendar/compose/CalendarState;Lcom/kizitonwose/calendar/compose/TimeBlockStore;Ljava/time/LocalDate;)Z
+	public static final fun rememberCalendarStateWithTimeBlocks (Ljava/time/YearMonth;Ljava/time/YearMonth;Ljava/time/YearMonth;Ljava/time/DayOfWeek;Lcom/kizitonwose/calendar/core/OutDateStyle;Ljava/util/List;Landroidx/compose/runtime/Composer;II)Lkotlin/Pair;
+	public static final fun rememberTimeBlockStore (Lcom/kizitonwose/calendar/compose/CalendarState;Ljava/util/List;Landroidx/compose/runtime/Composer;II)Lcom/kizitonwose/calendar/compose/TimeBlockStore;
+}
+
 public final class com/kizitonwose/calendar/compose/CalendarStateKt {
 	public static final fun rememberCalendarState (Ljava/time/YearMonth;Ljava/time/YearMonth;Ljava/time/YearMonth;Ljava/time/DayOfWeek;Lcom/kizitonwose/calendar/core/OutDateStyle;Landroidx/compose/runtime/Composer;II)Lcom/kizitonwose/calendar/compose/CalendarState;
 }
@@ -86,6 +97,31 @@ public final class com/kizitonwose/calendar/compose/ContentHeightMode : java/lan
 	public static fun getEntries ()Lkotlin/enums/EnumEntries;
 	public static fun valueOf (Ljava/lang/String;)Lcom/kizitonwose/calendar/compose/ContentHeightMode;
 	public static fun values ()[Lcom/kizitonwose/calendar/compose/ContentHeightMode;
+}
+
+public final class com/kizitonwose/calendar/compose/TimeBlockStore {
+	public static final field $stable I
+	public static final field Companion Lcom/kizitonwose/calendar/compose/TimeBlockStore$Companion;
+	public final fun addBlock (Lcom/kizitonwose/calendar/core/TimeBlock;)V
+	public final fun addBlocks (Ljava/util/List;)V
+	public final fun clear ()V
+	public final fun containsBlock (Ljava/lang/String;)Z
+	public final fun getAllBlocks ()Ljava/util/List;
+	public final fun getBlockById (Ljava/lang/String;)Lcom/kizitonwose/calendar/core/TimeBlock;
+	public final fun getBlocksForDate (Ljava/time/LocalDate;)Ljava/util/List;
+	public final fun getBlocksInRange (Ljava/time/LocalDate;Ljava/time/LocalDate;)Ljava/util/List;
+	public final fun isEmpty ()Z
+	public final fun removeBlock (Lcom/kizitonwose/calendar/core/TimeBlock;)Z
+	public final fun removeBlock (Ljava/lang/String;)Z
+	public final fun removeBlocksForDate (Ljava/time/LocalDate;)I
+	public final fun size ()I
+	public fun toString ()Ljava/lang/String;
+	public final fun updateBlock (Lcom/kizitonwose/calendar/core/TimeBlock;)Z
+}
+
+public final class com/kizitonwose/calendar/compose/TimeBlockStore$Companion {
+	public final fun create ()Lcom/kizitonwose/calendar/compose/TimeBlockStore;
+	public final fun create (Ljava/util/List;)Lcom/kizitonwose/calendar/compose/TimeBlockStore;
 }
 
 public final class com/kizitonwose/calendar/compose/heatmapcalendar/HeatMapCalendarState : androidx/compose/foundation/gestures/ScrollableState {
