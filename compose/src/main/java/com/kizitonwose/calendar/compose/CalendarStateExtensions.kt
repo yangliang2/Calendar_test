@@ -46,13 +46,13 @@ public fun rememberCalendarStateWithTimeBlocks(
         firstDayOfWeek = firstDayOfWeek,
         outDateStyle = outDateStyle,
     )
-    
+
     val timeBlockStore = rememberSaveable(
         saver = TimeBlockStoreSaver,
     ) {
         TimeBlockStore.create(initialTimeBlocks)
     }
-    
+
     return calendarState to timeBlockStore
 }
 

@@ -145,14 +145,14 @@ public class TimeBlockStore internal constructor() {
      */
     public fun addBlock(block: TimeBlock) {
         val date = block.startDate()
-        
+
         // Remove existing block with same ID if present
         removeBlockById(block.id, incrementVersion = false)
-        
+
         // Add to the appropriate date
         val dateBlocks = blocksMap.getOrPut(date) { mutableListOf() }
         dateBlocks.add(block)
-        
+
         incrementVersion()
     }
 
@@ -168,7 +168,7 @@ public class TimeBlockStore internal constructor() {
         for (block in blocks) {
             val date = block.startDate()
             removeBlockById(block.id, incrementVersion = false)
-            
+
             val dateBlocks = blocksMap.getOrPut(date) { mutableListOf() }
             dateBlocks.add(block)
         }
@@ -186,19 +186,19 @@ public class TimeBlockStore internal constructor() {
      */
     public fun updateBlock(block: TimeBlock): Boolean {
         val existingBlock = getBlockById(block.id) ?: return false
-        
+
         // Remove from old location
         val oldDate = existingBlock.startDate()
         blocksMap[oldDate]?.removeAll { it.id == block.id }
         if (blocksMap[oldDate]?.isEmpty() == true) {
             blocksMap.remove(oldDate)
         }
-        
+
         // Add to new location
         val newDate = block.startDate()
         val dateBlocks = blocksMap.getOrPut(newDate) { mutableListOf() }
         dateBlocks.add(block)
-        
+
         incrementVersion()
         return true
     }
@@ -289,12 +289,12 @@ public class TimeBlockStore internal constructor() {
     private fun removeBlockById(id: String, incrementVersion: Boolean): Boolean {
         var removed = false
         val iterator = blocksMap.iterator()
-        
+
         while (iterator.hasNext()) {
             val (date, blocks) = iterator.next()
             val initialSize = blocks.size
             blocks.removeAll { it.id == id }
-            
+
             if (blocks.size < initialSize) {
                 removed = true
                 // Remove empty date entries
@@ -303,11 +303,11 @@ public class TimeBlockStore internal constructor() {
                 }
             }
         }
-        
+
         if (removed && incrementVersion) {
             incrementVersion()
         }
-        
+
         return removed
     }
 
