@@ -41,7 +41,6 @@ public data class TimeBlock(
     val color: Int? = null,
     val metadata: Map<String, Any> = emptyMap(),
 ) : Serializable {
-
     init {
         require(id.isNotBlank()) { "TimeBlock id cannot be blank" }
         require(endTime.isAfter(startTime)) {

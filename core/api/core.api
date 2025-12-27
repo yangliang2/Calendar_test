@@ -70,6 +70,68 @@ public final class com/kizitonwose/calendar/core/OutDateStyle : java/lang/Enum {
 	public static fun values ()[Lcom/kizitonwose/calendar/core/OutDateStyle;
 }
 
+public final class com/kizitonwose/calendar/core/TimeBlock : java/io/Serializable {
+	public static final field Companion Lcom/kizitonwose/calendar/core/TimeBlock$Companion;
+	public fun <init> (Ljava/lang/String;Ljava/time/LocalDateTime;Ljava/time/LocalDateTime;Ljava/lang/String;Ljava/lang/String;Lcom/kizitonwose/calendar/core/TimeBlockType;Ljava/lang/Integer;Ljava/util/Map;)V
+	public synthetic fun <init> (Ljava/lang/String;Ljava/time/LocalDateTime;Ljava/time/LocalDateTime;Ljava/lang/String;Ljava/lang/String;Lcom/kizitonwose/calendar/core/TimeBlockType;Ljava/lang/Integer;Ljava/util/Map;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()Ljava/lang/String;
+	public final fun component2 ()Ljava/time/LocalDateTime;
+	public final fun component3 ()Ljava/time/LocalDateTime;
+	public final fun component4 ()Ljava/lang/String;
+	public final fun component5 ()Ljava/lang/String;
+	public final fun component6 ()Lcom/kizitonwose/calendar/core/TimeBlockType;
+	public final fun component7 ()Ljava/lang/Integer;
+	public final fun component8 ()Ljava/util/Map;
+	public final fun copy (Ljava/lang/String;Ljava/time/LocalDateTime;Ljava/time/LocalDateTime;Ljava/lang/String;Ljava/lang/String;Lcom/kizitonwose/calendar/core/TimeBlockType;Ljava/lang/Integer;Ljava/util/Map;)Lcom/kizitonwose/calendar/core/TimeBlock;
+	public static synthetic fun copy$default (Lcom/kizitonwose/calendar/core/TimeBlock;Ljava/lang/String;Ljava/time/LocalDateTime;Ljava/time/LocalDateTime;Ljava/lang/String;Ljava/lang/String;Lcom/kizitonwose/calendar/core/TimeBlockType;Ljava/lang/Integer;Ljava/util/Map;ILjava/lang/Object;)Lcom/kizitonwose/calendar/core/TimeBlock;
+	public final fun duration ()Ljava/time/Duration;
+	public final fun durationInHours ()D
+	public final fun durationInMinutes ()J
+	public final fun endDate ()Ljava/time/LocalDate;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getBlockType ()Lcom/kizitonwose/calendar/core/TimeBlockType;
+	public final fun getColor ()Ljava/lang/Integer;
+	public final fun getDescription ()Ljava/lang/String;
+	public final fun getEndTime ()Ljava/time/LocalDateTime;
+	public final fun getId ()Ljava/lang/String;
+	public final fun getMetadata ()Ljava/util/Map;
+	public final fun getStartTime ()Ljava/time/LocalDateTime;
+	public final fun getTitle ()Ljava/lang/String;
+	public fun hashCode ()I
+	public final fun isMultiDay ()Z
+	public final fun overlapsWith (Lcom/kizitonwose/calendar/core/TimeBlock;)Z
+	public final fun startDate ()Ljava/time/LocalDate;
+	public fun toString ()Ljava/lang/String;
+	public final fun withUpdatedTime (Ljava/time/LocalDateTime;Ljava/time/LocalDateTime;)Lcom/kizitonwose/calendar/core/TimeBlock;
+}
+
+public final class com/kizitonwose/calendar/core/TimeBlock$Companion {
+}
+
+public final class com/kizitonwose/calendar/core/TimeBlockExtensionsKt {
+	public static final fun filterByType (Ljava/util/List;Lcom/kizitonwose/calendar/core/TimeBlockType;)Ljava/util/List;
+	public static final fun filterByTypes (Ljava/util/List;Ljava/util/Set;)Ljava/util/List;
+	public static final fun findById (Ljava/util/List;Ljava/lang/String;)Lcom/kizitonwose/calendar/core/TimeBlock;
+	public static final fun findOverlaps (Ljava/util/List;)Ljava/util/List;
+	public static final fun hasOverlaps (Ljava/util/List;)Z
+	public static final fun sortedByStartTime (Ljava/util/List;)Ljava/util/List;
+	public static final fun totalDuration (Ljava/util/List;)Ljava/time/Duration;
+}
+
+public final class com/kizitonwose/calendar/core/TimeBlockType : java/lang/Enum {
+	public static final field BREAK Lcom/kizitonwose/calendar/core/TimeBlockType;
+	public static final field CUSTOM Lcom/kizitonwose/calendar/core/TimeBlockType;
+	public static final field EXERCISE Lcom/kizitonwose/calendar/core/TimeBlockType;
+	public static final field FOCUS Lcom/kizitonwose/calendar/core/TimeBlockType;
+	public static final field LEARNING Lcom/kizitonwose/calendar/core/TimeBlockType;
+	public static final field MEETING Lcom/kizitonwose/calendar/core/TimeBlockType;
+	public static final field PERSONAL Lcom/kizitonwose/calendar/core/TimeBlockType;
+	public static final field WORK Lcom/kizitonwose/calendar/core/TimeBlockType;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
+	public static fun valueOf (Ljava/lang/String;)Lcom/kizitonwose/calendar/core/TimeBlockType;
+	public static fun values ()[Lcom/kizitonwose/calendar/core/TimeBlockType;
+}
+
 public final class com/kizitonwose/calendar/core/Week : java/io/Serializable {
 	public fun <init> (Ljava/util/List;)V
 	public final fun component1 ()Ljava/util/List;

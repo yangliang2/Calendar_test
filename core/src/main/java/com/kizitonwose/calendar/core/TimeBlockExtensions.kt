@@ -8,6 +8,8 @@ import java.time.Duration
  * @since 3.0.0
  */
 
+// Overlap detection functions
+
 /**
  * Checks if a collection of time blocks contains any overlapping blocks.
  *
