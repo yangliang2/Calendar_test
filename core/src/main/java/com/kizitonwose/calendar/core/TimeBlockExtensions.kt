@@ -3,14 +3,6 @@ package com.kizitonwose.calendar.core
 import java.time.Duration
 
 /**
- * Extension functions and utilities for working with time blocks.
- *
- * @since 3.0.0
- */
-
-// Overlap detection functions
-
-/**
  * Checks if a collection of time blocks contains any overlapping blocks.
  *
  * @return true if any two blocks overlap, false otherwise.
