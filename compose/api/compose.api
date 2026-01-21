@@ -325,3 +325,52 @@ public final class com/kizitonwose/calendar/compose/yearcalendar/YearContentHeig
 	public static fun values ()[Lcom/kizitonwose/calendar/compose/yearcalendar/YearContentHeightMode;
 }
 
+public final class com/kizitonwose/calendar/compose/NowIndicatorConfig {
+	public static final field $stable I
+	public fun <init> ()V
+	public fun <init> (Landroidx/compose/ui/graphics/Color;FFFZLandroidx/compose/ui/graphics/StrokeCap;Z)V
+	public synthetic fun <init> (Landroidx/compose/ui/graphics/Color;FFFZLandroidx/compose/ui/graphics/StrokeCap;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1-0d7_KjU ()J
+	public final fun component2-D9Ej5fM ()F
+	public final fun component3-D9Ej5fM ()F
+	public final fun component4 ()Z
+	public final fun component5 ()Landroidx/compose/ui/graphics/StrokeCap;
+	public final fun component6 ()Z
+	public final fun copy-fQhZjZc (JFFFZLandroidx/compose/ui/graphics/StrokeCap;Z)Lcom/kizitonwose/calendar/compose/NowIndicatorConfig;
+	public static synthetic fun copy-fQhZjZc$default (Lcom/kizitonwose/calendar/compose/NowIndicatorConfig;JFFFZLandroidx/compose/ui/graphics/StrokeCap;ZILjava/lang/Object;)Lcom/kizitonwose/calendar/compose/NowIndicatorConfig;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getCircleRadius-D9Ej5fM ()F
+	public final fun getLineColor-0d7_KjU ()J
+	public final fun getLineCap ()Landroidx/compose/ui/graphics/StrokeCap;
+	public final fun getLineThickness-D9Ej5fM ()F
+	public final fun getPulseAnimation ()Z
+	public final fun getShowCircle ()Z
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class com/kizitonwose/calendar/compose/NowIndicatorDefaults {
+	public static final field INSTANCE Lcom/kizitonwose/calendar/compose/NowIndicatorDefaults;
+	public final fun config-fQhZjZc (JFFFZLandroidx/compose/ui/graphics/StrokeCap;Z)Lcom/kizitonwose/calendar/compose/NowIndicatorConfig;
+	public static synthetic fun config-fQhZjZc$default (Lcom/kizitonwose/calendar/compose/NowIndicatorDefaults;JFFFZLandroidx/compose/ui/graphics/StrokeCap;ZILjava/lang/Object;)Lcom/kizitonwose/calendar/compose/NowIndicatorConfig;
+	public final fun getMinimal ()Lcom/kizitonwose/calendar/compose/NowIndicatorConfig;
+	public final fun getProminent ()Lcom/kizitonwose/calendar/compose/NowIndicatorConfig;
+}
+
+public final class com/kizitonwose/calendar/compose/NowIndicatorKt {
+	public static final fun NowIndicatorContainer (Landroidx/compose/ui/Modifier;Ljava/time/LocalDate;IIJLcom/kizitonwose/calendar/compose/NowIndicatorConfig;Lkotlin/jvm/functions/Function3;Landroidx/compose/runtime/Composer;II)V
+	public static final fun NowIndicatorLine (Landroidx/compose/ui/Modifier;Lcom/kizitonwose/calendar/compose/NowIndicatorConfig;Landroidx/compose/runtime/Composer;II)V
+	public static final fun calculateTimePositionFraction (Ljava/time/LocalTime;II)Ljava/lang/Float;
+	public static synthetic fun calculateTimePositionFraction$default (Ljava/time/LocalTime;IIILjava/lang/Object;)Ljava/lang/Float;
+	public static final fun rememberNowIndicatorState (JLandroidx/compose/runtime/Composer;II)Lcom/kizitonwose/calendar/compose/NowIndicatorState;
+}
+
+public final class com/kizitonwose/calendar/compose/NowIndicatorState {
+	public static final field $stable I
+	public fun <init> (Ljava/time/LocalTime;)V
+	public final fun getCurrentTime ()Ljava/time/LocalTime;
+	public final fun getPositionFraction (II)Ljava/lang/Float;
+	public static synthetic fun getPositionFraction$default (Lcom/kizitonwose/calendar/compose/NowIndicatorState;IIILjava/lang/Object;)Ljava/lang/Float;
+	public final fun isVisibleForDate (Ljava/time/LocalDate;)Z
+}
+

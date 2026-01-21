@@ -83,6 +83,12 @@ enum class Page(
         subtitle = "Vertical year calendar - Hidden past months with continuous scroll. Best suited for large screens.",
         showToolBar = true,
     ),
+    Example12(
+        title = "Example 12 - Now Indicator",
+        subtitle = "Day Schedule View - Now Indicator (Current Time Line) showing real-time position with customizable styles. " +
+            "Based on Reddit user research requesting visual time indicators in calendar views.",
+        showToolBar = true,
+    ),
 }
 
 @Composable
